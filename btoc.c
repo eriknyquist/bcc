@@ -7,7 +7,8 @@ unsigned int seq;
 const char *head = "#include <stdio.h>\n\n"
                    "static char array[30000] = {0};\n"
                    "static char *p = array;\n\n"
-                   "int main (void)\n{";
+                   "int main (void)\n{\n"
+                   "char inp;\n";
 
 void indent(void)
 {
@@ -84,7 +85,8 @@ int main (int argc, char *argv[])
                 indent_line("putchar(*p);");
             break;
             case ',':
-                indent_line("*p = getchar();");
+                indent_line("inp = getchar();");
+                indent_line("if (inp > 0) *p = inp;");
             break;
             case '[':
                 printf("\n");
