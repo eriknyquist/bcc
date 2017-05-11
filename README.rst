@@ -22,19 +22,19 @@ Install
 Now, you have two new programs installed:
 
     * ``btoc`` (reads a brainfuck source file, prints C to stdout)
-    * ``bcc`` (reads a brainfuck source file, and creates an executable by
+    * ``bfcc`` (reads a brainfuck source file, and creates an executable by
       running ``btoc`` and piping it to ``gcc``)
 
 Compile a brainfuck program
 ===========================
 
-If you have GCC and a C standard lib. installed, you can use ``bcc`` to compile
+If you have GCC and a C standard lib. installed, you can use ``bfcc`` to compile
 brainfuck programs directly into executable format. Here is an example, Using
 ``hello_world.b``
 
 ::
 
-    > bcc hello_world.b -o hello_world
+    > bfcc hello_world.b -o hello_world
     > ./hello_world
 
     Hello World!

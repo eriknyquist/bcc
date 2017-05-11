@@ -32,7 +32,7 @@ int main (int argc, char *argv[])
     }
 
     depth = 0;
-    printf(head);
+    printf("%s", head);
 
     while((c = fgetc(fp)) != EOF) {
         switch (c) {
@@ -69,7 +69,7 @@ int main (int argc, char *argv[])
                 continue;
         }
 
-        printf(m);
+        printf("%s", m);
     }
 
     fclose(fp);
